@@ -16,7 +16,7 @@ after_success:
 # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Take those images and push them to docker hub
-  - docker push filmboy3/multi-client ./client 
-  - docker push filmboy3/multi-nginx ./nginx 
-  - docker push filmboy3/multi-server ./server 
-  - docker push filmboy3/multi-worker ./worker 
+  - docker push filmboy3/multi-client 
+  - docker push filmboy3/multi-nginx
+  - docker push filmboy3/multi-server
+  - docker push filmboy3/multi-worker

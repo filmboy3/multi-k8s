@@ -20,8 +20,9 @@ class Fib extends Component {
 
   async fetchIndexes() {
     const seenIndexes = await axios.get('/api/values/all');
+    let prevSeen = [this.state.seenIndexes]
     this.setState({
-      seenIndexes: seenIndexes.data
+      seenIndexes: prevSeen.push(seenIndexes.data)
     });
   }
 
